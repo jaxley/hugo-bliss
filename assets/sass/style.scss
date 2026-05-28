@@ -724,6 +724,16 @@ a.archive:visited {
   font-size: 1.5em;
 }
 
+/* ----- Subscribe ------ */
+.subscribe-link {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--default-transition-time);
+}
+
+
 /* ---------- Aside ---------- */
 aside,
 .aside {
