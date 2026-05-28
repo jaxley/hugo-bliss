@@ -7,7 +7,9 @@
 
 {{/* Post list */}}
 <ul class="post-list">
-  {{ range .Paginator.Pages }}
+  {{ $pages := where .Site.RegularPages "Type" "not in" (slice "page" "about") }}
+  {{ $paginator := .Paginate $pages }}
+  {{ range $paginator.Pages }}
     <li class="post-list__item">
       <div class="post-list__card">
         <a class="post-list__link" href="{{ .RelPermalink }}">
